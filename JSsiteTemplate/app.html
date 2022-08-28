@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Name: A Coding Project By Joshua Emery</title>
+    <title>Loan Calculator: A Coding Project By Joshua Emery</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,9 +19,9 @@
 
 <body class="d-flex flex-column h-100">
 <!-- ==== Nav Section==== -->
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#"> <img src="img/JoshEmeryFreeCodeLogoColorBlue.png" class="d-inline-block align-text-top" width="30" height="24">APP NAME</a>
+        <a class="navbar-brand" href="#"> <img src="img/JoshEmeryFreeCodeLogoColorBlue.png" class="d-inline-block align-text-top" width="30" height="24">Loan Calculator</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -29,7 +29,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item">
-                    <a class="nav-link"  href="#">Home</a>
+                    <a class="nav-link"  href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="app.html">The App</a>
@@ -50,6 +50,66 @@
     <!-- ==== Main Section ===== -->
     <main class="flex-shrink-0">
         <div class="container">
+            <div class="row row-cols-1 row-cols-lg-2">
+                <div class="col col-lg-4 border-end border-2">
+                    <h1>Loan Calculator</h1>
+                    <div class="col col-lg-8">
+                        <div>
+                            <form class="row gy-3 gx-3 bg-light">
+                                <p>Loan Amount</p>
+                                <div class="row">
+                                    <input id="loanAmount" type="number" class="form-control" placeholder="Loan Amount" 
+                                     aria-label="Loan Amount">
+                                </div>
+                                <p>Payments</p>
+                                <div class="row">
+                                    <input id="payments" type="number" class="form-control" placeholder="Payments" 
+                                     aria-label="Payments">
+                                </div>
+                                <p>Rate</p>
+                                <div class="row">
+                                    <input id="rate" type="number" class="form-control" placeholder="Rate" 
+                                     aria-label="Rate">
+                                </div>
+                                <div class="col-12 d-flex justify-content-end">
+                                    <button id="btnSubmit" type="button" class="btn btn-dark btn-lg">Caluclate</button>
+                                </div>
+                            </form>
+                            <h2 class="mt-5 border-bottom border-2">Results </h2>
+                            <div class="table-responsive">
+                                <table class="table table-striped table-sm">
+                                    <tbody id="results">
+                                        <!--Results Go Here-->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div>
+                    <h4 class="lead">
+                        <strong>Your Monthly Payments</strong>  
+                    </h4>
+                    <div class="col">
+                        <p id="totalPrincipal">Total Principal</p>
+                        <p id="totalInterest">Total Interest</p>
+                        <p id="totalCost">Total Cost</p>
+                    </div>
+                    <table class="table table-striped">
+                        <thead class="table-dark">
+                          <tr>
+                            <th scope="col">Month</th>
+                            <th scope="col">Payment</th>
+                            <th scope="col">Principal</th>
+                            <th scope="col">Interest</th>
+                            <th scope="col">Total Interest</th>
+                            <th scope="col">Balance</th>
+                          </tr>
+                        </thead>
+                    </table>
+                </div> 
+            </div>
 
         </div>
      </main>
